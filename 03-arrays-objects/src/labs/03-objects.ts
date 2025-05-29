@@ -6,3 +6,31 @@
  */
 
 // TODO: Book 타입, books 배열, availableBooks 필터링
+type Book = {
+    title: string;
+    author: string;
+    publishedYear: number;
+    isAvailable: boolean;
+};
+
+const book1: Book = {
+    title: "코끼리",
+    author: "해리슨",
+    publishedYear: 2025,
+    isAvailable: true,
+};
+
+const book2: Book = {
+    title: "하마",
+    author: "제니",
+    publishedYear: 2025,
+    isAvailable: false,
+};
+
+const books: Book[] = [book1, book2];
+
+for (let book of books) {
+    if (book.isAvailable) {
+        console.log(book.title);
+    }
+}

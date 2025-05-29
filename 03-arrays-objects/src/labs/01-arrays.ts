@@ -7,3 +7,11 @@
  */
 
 // TODO: users 배열 선언 및 위 조건 처리
+
+const users: string[] = ["eunji", "minsu", "sora"];
+
+for (let user of users) {
+    if (user.length <= 4) {
+        console.log(user.toUpperCase());
+    }
+}

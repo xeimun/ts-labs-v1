@@ -6,3 +6,16 @@
  */
 
 // TODO: StudentScore 타입 선언, scores 배열 생성, passed 계산
+type StudentScore = [string, number];
+
+const student1: StudentScore = ["김", 60];
+const student2: StudentScore = ["이", 80];
+const student3: StudentScore = ["박", 70];
+
+const scores: StudentScore[] = [student1, student2, student3];
+
+for (let score of scores) {
+    if (score[1] >= 70) {
+        console.log(score[0]);
+    }
+}

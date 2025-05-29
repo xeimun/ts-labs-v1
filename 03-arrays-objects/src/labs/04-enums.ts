@@ -8,3 +8,39 @@
  */
 
 // TODO: OrderStatus enum, Order 타입, orders 배열, shippedOrders 추출
+enum OrderStatus {
+    PENDING = "PENDING",
+    SHIPPED = "SHIPPED",
+    DELIVERED = "DELIVERED",
+    CANCELLED = "CANCELLED",
+}
+
+type Order = {
+    id: number;
+    status: OrderStatus;
+    item: string;
+};
+
+const order1 = {
+    id: 1,
+    status: OrderStatus.SHIPPED,
+    item: "연필",
+};
+const order2 = {
+    id: 2,
+    status: OrderStatus.PENDING,
+    item: "지우개",
+};
+const order3 = {
+    id: 3,
+    status: OrderStatus.CANCELLED,
+    item: "연필깎이",
+};
+
+const orders: Order[] = [order1, order2, order3];
+
+for (let order of orders) {
+    if (order.status === OrderStatus.SHIPPED) {
+        console.log(order.item);
+    }
+}
