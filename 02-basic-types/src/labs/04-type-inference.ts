@@ -12,5 +12,8 @@ let scores = [100, "A", true]; // 여러 타입이 섞인 배열 추론 결과�
 // isHoliday = 0;
 
 // (2) const와 let의 타입 추론 차이도 확인해보세요.
-const pi = 3.14; // pi 타입은?
-let e = 2.71; // e 타입은?
+const pi = 3.14; // pi 타입은? 3.14
+let e = 2.71; // e 타입은? number
+
+console.log(typeof pi); // tupeof 결과는 number지만, 타입은 3.14
+console.log(typeof e);
