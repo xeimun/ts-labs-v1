@@ -14,3 +14,24 @@ const users = [
 const isActiveUser = (u: User) => u.isActive;
 findUser(users, isActiveUser) // { id: 2, name: 'Lee', isActive: true }
 */
+
+type User = {
+    id: number;
+    name: string;
+    isActive: boolean;
+};
+
+type Predicate = (user: User) => boolean;
+
+function findUser(users: User[], predicate: Predicate): User | undefined {
+    return users.find(predicate); // 첫 번째로 true인 요소 반환
+}
+
+const users = [
+    { id: 1, name: "Kim", isActive: false },
+    { id: 2, name: "Lee", isActive: true },
+];
+
+const isActiveUser = (u: User) => u.isActive;
+
+console.log(findUser(users, isActiveUser));
