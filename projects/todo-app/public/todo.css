@@ -194,6 +194,7 @@ body {
 /* 새롭게 작성 */
 li {
     display: flex;
+    align-items: center;
 }
 
 li.checked {
@@ -201,7 +202,7 @@ li.checked {
     color: gray;
 }
 
-.delete-btn {
+.group-btn {
     display: none;
     color: gray;
     background: none;
@@ -210,12 +211,19 @@ li.checked {
     margin-left: auto; /* 왼쪽 공간을 최대한 밀어 요소를 오른쪽 끝으로 정렬함 (flex에서 사용) */
 }
 
-li:hover .delete-btn {
+li:hover .group-btn {
     display: inline;
 }
 
-.delete-btn:hover {
+.group-btn:hover {
     background: #f5f7fb;
     border-radius: 4px;
     font-weight: bold;
+}
+
+.edit-input {
+    font-size: 1rem;
+    padding: 4px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
