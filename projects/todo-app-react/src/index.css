@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 기본 배경색 */
+/* @apply는 Tailwind CSS의 유틸리티 클래스를 일반 CSS 안에서 사용할 수 있게 해주는 지시어(디렉티브) */
+body {
+    @apply bg-gray-100 text-gray-800;
+}
